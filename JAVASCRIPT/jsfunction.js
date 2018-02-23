@@ -11,7 +11,7 @@ function headerMenu (app) {
     var header = document.getElementById ("headerMenuId");
     header.appendChild (nav);
 
-    $.getJSON("https://randomuser.me/api?results=3", function(data){
+    $.getJSON("https://randomuser.me/api/?results=5", function(data){
         console.log(data);
     });
 }
