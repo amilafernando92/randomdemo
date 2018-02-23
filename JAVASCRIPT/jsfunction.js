@@ -13,8 +13,19 @@ function headerMenu (app) {
 }
 
 $(document).ready(function(){
-    $.getJSON("https://randomuser.me/api/?results=5", function(data){
+    var url = 'https://randomuser.me/api/?results=5';
+    $.getJSON(url, function(data) {
         console.log(data);
+        var persona = data.results[0];
+        //console.log(persona);
+
+        $('#nome').text(persona.name.first);
+        $('#cognome').text(persona.name.last);
+        $('#foto').attr('src', persona.picture.large);
+
+        for(var k = 0; k < data.results.length; k++) {
+            //console.log(data.results[k].name.first + ' ' + data.results[k].name.last);
+        }
     });
 });
 
