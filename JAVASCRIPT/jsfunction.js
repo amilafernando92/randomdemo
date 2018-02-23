@@ -1,3 +1,16 @@
+/*
+ * global var
+ */
+
+var globalvar;
+
+$(document).ready(function(){
+    $.getJSON("https://randomuser.me/api/?results=1&gender=female", function(data) {
+        globalvar = data;
+        $('#icon').attr('src', data.results[0].picture.large);
+    });
+});
+
 function headerMenu (app) {
     var nav = document.createElement ("nav");
     var ul = document.createElement ("ul");
@@ -11,23 +24,6 @@ function headerMenu (app) {
     var header = document.getElementById ("headerMenuId");
     header.appendChild (nav);
 }
-
-$(document).ready(function(){
-    $.getJSON("https://randomuser.me/api/?results=10&?gender=female", function(data) {
-        console.log(data);
-        var persona = data.results[0];
-        console.log(persona);
-
-        $('#nome').text(persona.name.first);
-        $('#cognome').text(persona.name.last);
-        $('#foto').attr('src', persona.picture.large);
-
-        for(var k = 0; k < data.results.length; k++) {
-            console.log(data.results[k].name.first + ' ' + data.results[k].name.last);
-        }
-    });
-});
-
 
 function addImage (app) {
     var li = document.createElement ("li");
@@ -64,33 +60,40 @@ function createAnchor (elem, string, url) {
     return elem;
 }
 
-function addText (id, string) {
+function addImg () {
+    //
+}
+
+function addText (id) {
     var papp = document.getElementById ("simpletext");
     var h1app = document.getElementById ("bigtext");
+    var persona = globalvar.results[0];
+    $('#icon').attr('src', persona.picture.large);
     switch (id) {
         case 1 :
             papp.innerText = "Hi, My name is";
-            h1app.innerText = string;
+            h1app.innerText = persona.name.first + " " + persona.name.last;
         break;
         case 2 :
             papp.innerText = "My e-mail address is";
-            h1app.innerText = string;
+            h1app.innerText = persona.email;
         break;
         case 3 :
             papp.innerText = "My birthday is";
-            h1app.innerText = string;
+            var app = persona.dob.split(" ");
+            h1app.innerText = app [0];
         break;
         case 4 :
             papp.innerText = "My address is";
-            h1app.innerText = string;
+            h1app.innerText = persona.location.street;
         break;
         case 5 :
             papp.innerText = "My phone number is";
-            h1app.innerText = string;
+            h1app.innerText = persona.cell;
         break;
         case 6 :
             papp.innerText = "My password is";
-            h1app.innerText = string;
+            h1app.innerText = persona.login.password;
         break;
     }
 }
