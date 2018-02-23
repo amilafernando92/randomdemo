@@ -10,11 +10,13 @@ function headerMenu (app) {
     nav.appendChild (ul);
     var header = document.getElementById ("headerMenuId");
     header.appendChild (nav);
+}
 
+$(document).ready(function(){
     $.getJSON("https://randomuser.me/api/?results=5", function(data){
         console.log(data);
     });
-}
+});
 
 
 function addImage (app) {
