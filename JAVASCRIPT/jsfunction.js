@@ -13,7 +13,7 @@ function headerMenu (app) {
 }
 
 $(document).ready(function(){
-    var url = 'https://randomuser.me/api/?results=5';
+    /*var url = 'https://randomuser.me/api/?results=5';
     $.getJSON(url, function(data) {
         console.log(data);
         var persona = data.results[0];
@@ -26,7 +26,8 @@ $(document).ready(function(){
         for(var k = 0; k < data.results.length; k++) {
             //console.log(data.results[k].name.first + ' ' + data.results[k].name.last);
         }
-    });
+    });*/
+    console.log("ciao");
 });
 
 
