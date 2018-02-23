@@ -1,0 +1,33 @@
+{
+  "name": "randomdemo",
+  "version": "1.0.1",
+  "description": "Random User API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amilafernando92/randomdemo.git"
+  },
+  "keywords": [
+    "randomuser",
+    "npm",
+    "gulp",
+    "api"
+  ],
+  "author": "Amila Fernando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amilafernando92/randomdemo/issues"
+  },
+  "homepage": "https://github.com/amilafernando92/randomdemo#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.5"
+  }
+}
