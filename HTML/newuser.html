@@ -6,30 +6,63 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Sign Up</title>
         <link rel="stylesheet" href="../CSS/style.css">
-        <script src="../JAVASCRIPT/jsfunction.js"></script>
+        <script type="text/javascript" src="../JAVASCRIPT/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="../JAVASCRIPT/jsfunction.js"></script>
     </head>
     <body>
-        <div class="maincontainer" id="">
+        <div class="maincontainer">
             <header id="headerMenuId">
                 <script>headerMenu (2)</script>
             </header>
             <main>
-                <div class="subcontainer" id="">
-                    <p>Insert your Foto : <input type="file" name="foto" id=""></p>
-                    <p>Name : <input type="text" name="name" id=""></p>
-                    <p>Surname : <input type="text" name="surname" id=""></p>
-                    <p>E-Mail : <input type="email" name="mail" id=""></p>
-                    <p>Birthday : <input type="date" name="bday" id=""></p>
-                    <p>Address : <input type="text" name="address" id=""></p>
-                    <p>Password : <input type="text" name="password" id=""></p>
-                    <p>About You : <textarea name="aboutme" id="" cols="30" rows="10"></textarea></p>
-                    <input type="submit" value="Submit" class="button">
-                    <input type="reset" value="Reset" class="button">
+                <div class="subcontainer">
+                    <div id="textcontainer">
+                        <h1>Sign In</h1>
+                        <p>Do you want to start to be in Random User community? Sign In in my web site and start!</p>
+                    </div>
+                    <form action="" method="post">
+                        <div class="minicontainer" id="firstline">
+                            <p>
+                                <label id="button">Insert your Foto</label>
+                                <label>(Only png, gif and jpeg)</label>
+                                <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg">
+                            </p>
+                            <p>
+                                <input type="radio" name="sex" value="Male" checked>Male
+                                <input type="radio" name="sex" value="Female">Female
+                                <input type="radio" name="sex" value="Other">Other
+                            </p>
+                        </div>
+                        <div class="minicontainer" id="secondline">
+                            <p><input type="text" name="name" placeholder="Name"></p>
+                            <p><input type="text" name="surname" placeholder="Surname"></p>
+                        </div>
+                        <div class="minicontainer" id="thirdline">
+                            <p><input type="email" name="mail" placeholder="E-Mail"></p>
+                            <p><input type="password" name="password" id="pwd" placeholder="Password">
+                                <button type="button" id="eye" onclick="showHide()">
+                                    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+                                </button></p>
+                        </div>
+                        <div class="minicontainer" id="fourthline">
+                            <p><input type="text" name="bday" placeholder="Birthday" onfocus="this.type='date'"></p>
+                            <p><input type="text" name="address" placeholder="Address"></p>
+                        </div>
+                        <div class="minicontainer" id="fifthline">
+                            <p></label><textarea name="aboutme" cols="30" rows="10" placeholder="About You"></textarea></p>
+                        </div>
+                        <div class="minicontainer" id="sixthline">
+                            <p><input type="checkbox" name="privacy" id="privacy"><label>I have read the <a href="privacy.html">privacy notice</a> and agree to have my personal details processed for purposes of the above mentioned request.</label></p>
+                        </div>
+                        <div class="minicontainer" id="sevenththline">
+                            <input type="submit" value="Submit" class="button">
+                            <input type="reset" value="Reset" class="button">
+                        </div>
+                    </form>
                 </div>
             </main>
-            <footer>
-                <div class="subcontainer" id="">
-                </div>
+            <footer id="footer">
+                <script>createFooter ()</script>
             </footer>
         </div>
     </body>
