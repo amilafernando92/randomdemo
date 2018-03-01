@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -6,26 +6,44 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Contact Us</title>
         <link rel="stylesheet" href="../CSS/style.css">
-        <script src="../JAVASCRIPT/jsfunction.js"></script>
+        <script type="text/javascript" src="../JAVASCRIPT/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="../JAVASCRIPT/jsfunction.js"></script>
     </head>
     <body>
-        <div class="maincontainer" id="">
+        <div class="maincontainer">
             <header id="headerMenuId">
                 <script>headerMenu (3)</script>
             </header>
             <main>
-                <div class="subcontainer" id="">
-                    <p>Name : <input type="text" name="name" id=""></p>
-                    <p>Surname : <input type="text" name="surname" id=""></p>
-                    <p>E-Mail : <input type="email" name="mail" id=""></p>
-                    <p>Massege : <textarea name="aboutme" id="" cols="30" rows="10"></textarea></p>
-                    <input type="submit" value="Submit" class="button">
-                    <input type="reset" value="Reset" class="button">
+                <div class="subcontainer">
+                    <div id="textcontainer">
+                        <h1>Contact Us</h1>
+                        <p>Have you any question? Do you want to learn more? Do you want say your opinion? Or simply you want to say hi! contact me I'm here for you </p>
+                    </div>
+                    <form action="" method="post">
+                        <div class="minicontainer" id="linefirst">
+                            <p><input type="text" name="name" placeholder="Name"></p>
+                            <p><input type="text" name="surname" placeholder="Surname"></p>
+                        </div>
+                        <div class="minicontainer" id="linesecond">
+                            <p><input type="email" name="mail" placeholder="E-Mail"></p>
+                            <p><input type="text" name="telephone" placeholder="Telephone"></p>
+                        </div>
+                        <div class="minicontainer" id="linethird">
+                            <p><textarea name="aboutme" cols="30" rows="10" placeholder="Massege"></textarea></p>
+                        </div>
+                        <div class="minicontainer" id="linefourth">
+                            <p><input type="checkbox" name="privacy" id="privacy"><label>I have read the <a href="privacy.html">privacy notice</a> and agree to have my personal details processed for purposes of the above mentioned request.</label></p>
+                        </div>
+                        <div class="minicontainer" id="lineffifth">
+                            <input type="submit" value="Submit" class="button">
+                            <input type="reset" value="Reset" class="button">
+                        </div>
+                    </form>
                 </div>
             </main>
-            <footer>
-                <div class="subcontainer" id="">
-                </div>
+            <footer id="footer">
+                <script>createFooter ()</script>
             </footer>
         </div>
     </body>

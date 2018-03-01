@@ -8,16 +8,15 @@
         <link rel="stylesheet" href="../CSS/style.css">
         <script type="text/javascript" src="../JAVASCRIPT/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="../JAVASCRIPT/jsfunction.js"></script>
-        <script type="text/javascript" src="../JAVASCRIPT/generatorePersona.js"></script>
     </head>
     <body>
-        <div class="maincontainer" id="">
+        <div id="loader"></div>
+        <div class="maincontainer">
             <header id="headerMenuId">
                 <script>headerMenu (1)</script>
-                <img src="" alt="">
             </header>
             <main>
-                <div class="subcontainer" id="">
+                <div class="subcontainer">
                     <div class="fotocontainer">
                         <img src="../IMG/foto.jpg" id="icon">
                     </div>
@@ -35,27 +34,23 @@
                             <li id="password" onmouseover="addText (6)" onmouseout="removeText ()"></li>
                         </ul>
                     </div>
-                    <div class="jobcontainer">
-
-                    </div>
                     <div class="socialcontainer">
                         <h1>My Social contacts</h1>
                         <ul>
-                            <li class="" id="facebook"><img src="../IMG/social/facebook.png" alt=""></li>
-                            <li class="" id="googleplus"><img src="../IMG/social/google+.png" alt=""></li>
-                            <li class="" id="instagram"><img src="../IMG/social/instagram.png" alt=""></li>
-                            <li class="" id="linkedin"><img src="../IMG/social/linkedin.png" alt=""></li>
-                            <li class="" id="pinterest"><img src="../IMG/social/pinterest.png" alt=""></li>
-                            <li class="" id="tumblr"><img src="../IMG/social/tumblr.png" alt=""></li>
-                            <li class="" id="twitter"><img src="../IMG/social/twitter.png" alt=""></li>
-                            <li class="" id="youtube"><img src="../IMG/social/youtube.png" alt=""></li>
+                            <li id="facebook"><img src="../IMG/social/facebook.png"></li>
+                            <li id="googleplus"><img src="../IMG/social/google+.png"></li>
+                            <li id="instagram"><img src="../IMG/social/instagram.png"></li>
+                            <li id="linkedin"><img src="../IMG/social/linkedin.png"></li>
+                            <li id="pinterest"><img src="../IMG/social/pinterest.png"></li>
+                            <li id="tumblr"><img src="../IMG/social/tumblr.png"></li>
+                            <li id="twitter"><img src="../IMG/social/twitter.png"></li>
+                            <li id="youtube"><img src="../IMG/social/youtube.png"></li>
                         </ul>
                     </div>
                 </div>
             </main>
-            <footer>
-                <div class="subcontainer">
-                </div>
+            <footer id="footer">
+                <script>createFooter ()</script>
             </footer>
         </div>
     </body>
