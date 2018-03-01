@@ -64,10 +64,6 @@ function createAnchor (elem, string, url) {
     return elem;
 }
 
-function addImg () {
-    //
-}
-
 function addText (id) {
     var papp = document.getElementById ("simpletext");
     var h1app = document.getElementById ("bigtext");

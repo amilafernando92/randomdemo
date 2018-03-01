@@ -6,15 +6,44 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Home</title>
         <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
         <script type="text/javascript" src="../JAVASCRIPT/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="../JAVASCRIPT/jsfunction.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     </head>
     <body>
         <div id="loader"></div>
         <div class="maincontainer">
-            <header id="headerMenuId">
+            <!--header id="headerMenuId">
                 <script>headerMenu (1)</script>
-            </header>
+            </header-->
+            <div class="container-fluid">
+                <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                            <img src="bootstrap-solid.svg" width="30" height="30" alt="">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
             <main>
                 <div class="subcontainer">
                     <div class="fotocontainer">
