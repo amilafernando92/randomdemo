@@ -13,7 +13,8 @@ $(document).ready(function(){
 });
 
 function headerMenu (app) {
-    var nav = document.createElement ("nav");
+    createButton ();
+    /*var nav = document.createElement ("nav");
     var ul = document.createElement ("ul");
     li = addImage (app);
     ul.appendChild (li);
@@ -22,12 +23,35 @@ function headerMenu (app) {
     ul.appendChild (createLi ("Contact Us", "contact.html"));
     ul.appendChild (createLi ("About Us", "about.html"));
     nav.appendChild (ul);
-    var header = document.getElementById ("headerMenuId");
-    header.appendChild (nav);
+    var header = document.getElementById ("container-fluid");
+    header.appendChild (nav);*/
+}
+
+function createButton () {
+    var button = document.createElement ("button");
+    button.className = "navbar-toggler navbar-toggler-right";
+    console.log (button);
+    /*<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
+    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>*/
+}
+
+function createLi (string, url) {
+    var app = document.createElement ("li");
+    app = createAnchor (app, string, url);
+    return app;
+}
+
+function createAnchor (elem, string, url) {
+    var app = document.createElement ("a");
+    app.href = url;
+    app.innerText = string;
+    elem.appendChild (app);
+    return elem;
 }
 
 function addImage (app) {
-    var li = document.createElement ("li");
     var img = document.createElement ("img");
     switch (app) {
         case 1 :
@@ -48,20 +72,6 @@ function addImage (app) {
     }
     li.appendChild (img);
     return li;
-}
-
-function createLi (string, url) {
-    var app = document.createElement ("li");
-    app = createAnchor (app, string, url);
-    return app;
-}
-
-function createAnchor (elem, string, url) {
-    var app = document.createElement ("a");
-    app.href = url;
-    app.innerText = string;
-    elem.appendChild (app);
-    return elem;
 }
 
 function addText (id) {
