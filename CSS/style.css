@@ -3,47 +3,71 @@ body {
     background-color: #000000;
 }
 /* index.html*/
+div#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: initial;
+    background: #000000 url("https://media.giphy.com/media/1zYilwfhmjsK4/giphy.gif") no-repeat center center;
+    /*background: #000000 url("https://media.giphy.com/media/plv7UYBwzlzzO/giphy.gif") no-repeat center center;
+    background-size: cover;*/
+}
 div.maincontainer {
     width: 90%;
     position: relative;
     margin: 0px auto;
 }
+div.maincontainer header, div.maincontainer main, div.maincontainer footer#footer {
+    display: flex;
+    flex-direction: column;
+}
 div.maincontainer header {
     background-color: #2c2e31;
     height: 70px;
     position: fixed;
-    width: 90%;
+    width: 100%;
     top: 0px;
     z-index: 100;
+    left: 0px;
 }
 div.maincontainer header nav ul {
     list-style-type: none;
     margin: 0px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
 }
 div.maincontainer header nav ul li {
-    display: inline-block;
-    border: 1px solid #2c2e31;
+    display: flex;
+    flex-direction: row;
     width: 100px;
-    padding: 10px 0px;
     text-align: center;
     background-color: #2c2e31;
     cursor: pointer;
-    padding-top: 25px;
+    height: 70px;
+    margin-right: 30px;
 }
 div.maincontainer header nav ul li:first-child {
     padding: 0px;
     border: none;
     position: relative;
+    height: 70px;
+    cursor: default;
 }
 div.maincontainer header nav ul li img {
     height: 40px;
-    position: absolute;
-    top: -25px;
+    position: relative;
+    margin-top: 14px;
 }
 div.maincontainer header nav ul li a {
     text-decoration: none;
     color: white;
-    margin: 10px;
+    padding: 26px;
+    position: absolute;
 }
 div.maincontainer header nav ul li p a:hover {
     color: #2c2e31;
@@ -54,7 +78,13 @@ div.maincontainer header nav ul li:hover>a {
     border: 1px solid white;
 }
 div.maincontainer main {
-    margin-top: 100px;
+    position: relative;
+    top: 70px;
+    padding-top: 5%;
+}
+div.maincontainer main div.subcontainer {
+    display: flex;
+    flex-direction: column;
 }
 div.maincontainer main div.subcontainer div.fotocontainer {
     margin: 0px auto;
@@ -68,7 +98,8 @@ div.maincontainer main div.subcontainer div.fotocontainer img {
 div.maincontainer main div.subcontainer div.textcontainer {
     text-align: center;
     margin-top: 50px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100px;
 }
 div.maincontainer main div.subcontainer div.textcontainer div.container {
@@ -89,6 +120,11 @@ div.maincontainer main div.subcontainer div.textcontainer div.name {
 div.maincontainer main div.subcontainer div.textcontainer * {
     height: 50px;
     margin: 0px;
+    color: #ffffff;
+    width: 100%;
+}
+div.maincontainer main div.subcontainer div.iconcontainer {
+    display: flex;
 }
 div.maincontainer main div.subcontainer div.iconcontainer ul {
     list-style-type: none;
@@ -100,6 +136,8 @@ div.maincontainer main div.subcontainer div.iconcontainer ul {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
 }
 div.maincontainer main div.subcontainer div.iconcontainer ul li {
     background-image: url(../IMG/icon.png);
@@ -151,15 +189,16 @@ div.maincontainer main div.subcontainer div.iconcontainer ul li#password:hover {
 }
 div.maincontainer main div.subcontainer div.socialcontainer {
     margin: 0 auto;
-    margin-top: 10%;
-    background-color: white;
+    margin-top: 50px;
+    background-color: #000000;
     float:right;
-    position:relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align:left;
 }
 div.maincontainer main div.subcontainer div.socialcontainer h1 {
-    color: #2c2e31;
+    color: #ffffff;
     margin: 0px;
     text-align: center;
     left: 0%;
@@ -170,20 +209,21 @@ div.maincontainer main div.subcontainer div.socialcontainer ul {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: row;
     width: max-content;
-    background-color: white;
+    background-color: #000000;
 }
 div.maincontainer main div.subcontainer div.socialcontainer ul li {
     cursor: pointer;
     position: relative;
     float: left;
-    background-color: white;
+    background-color: #000000;
 }
 div.maincontainer main div.subcontainer div.socialcontainer ul li img {
-    width: 40px;
+    width: 30px;
     padding: 20px;
-    background-color: #2c2e31;
+    background-color: #000000;
 }
 div.maincontainer main div.subcontainer div.socialcontainer ul li img:hover {
     background-color: white;
@@ -212,29 +252,153 @@ div.maincontainer main div.subcontainer div.socialcontainer ul li#twitter img:ho
 div.maincontainer main div.subcontainer div.socialcontainer ul li#youtube img:hover {
     content:url("../IMG/social/youtubeblack.png");
 }
+div.maincontainer footer#footer {
+    padding-top: 10%;
+}
+div.maincontainer footer#footer div.subcontainer {
+    margin-top: 5%;
+}
+div.maincontainer footer#footer div.subcontainer div#contup div#title {
+    width: 100%;
+}
+div.maincontainer footer#footer div.subcontainer div#contup div#title h1 {
+    text-align: center;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown div#developer, div.maincontainer footer#footer div.subcontainer div#contdown div#copyright {
+    width: 50%;
+    margin: 20px;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown {
+    display: flex;
+    margin-bottom: 5%;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown div#developer * {
+    text-align: right;
+    font-size: 1em;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown div#copyright * {
+    text-align: left;
+    font-size: 1em;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown div p:first {
+    margin-top: 5%;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown div#copyright h5, div.maincontainer footer#footer div.subcontainer div#contdown div#developer h5 {
+    font-size: 1.5em;
+    margin: 0px;
+}
+div.maincontainer footer#footer div.subcontainer div#contdown div#copyright p a, div.maincontainer main div.subcontainer div#linefourth p label a, div.maincontainer main div.subcontainer div#sixthline p label a, div.maincontainer main div.subcontainer div.conttext p a {
+    color: #83ba43;
+    text-decoration: none;
+}
+div.maincontainer footer#footer * {
+    color: #ffffff;
+}
 /* newuser.html */
 div.maincontainer main div.subcontainer input, div.maincontainer main div.subcontainer textarea {
+    width: 100%;
+    font-size: 1.5em;
+    border: none;
+    padding: 0px 10px;
+}
+div.maincontainer main div.subcontainer input[type=checkbox], div.maincontainer main div.subcontainer input[type=radio] {
+    width: 10px;
+    padding: 0px;
+    margin-right: 3%;
+}
+div.maincontainer main div.subcontainer input[type=radio]:nth-child(2), div.maincontainer main div.subcontainer input[type=radio]:nth-child(3) {
+    margin-left: 5%;
+}
+div.maincontainer main div.subcontainer div.minicontainer {
+    display: flex;
+    margin-bottom: 3%;
+}
+div.maincontainer main div.subcontainer div#textcontainer, div.maincontainer main div.subcontainer div.conttext {
+    margin-bottom: 10%;
+    display: flex;
+}
+div.maincontainer main div.subcontainer div.conttext h1 {
+    display: flex;
+    flex-direction: column;
+}
+div.maincontainer main div.subcontainer div#textcontainer h1, div.maincontainer main div.subcontainer div.conttext h1, div.maincontainer main div.subcontainer div.conttext strong {
+    width: 30%;
+}
+div.maincontainer main div.subcontainer div.conttext strong {
+    font-size: 0.5em;
+    margin-top: 3%;
+}
+div.maincontainer main div.subcontainer div#textcontainer p {
     width: 80%;
-    float: right;
+    text-align: justify;
+}
+div.maincontainer main div.subcontainer div#textcontainer *, div.maincontainer main div.subcontainer div.conttext * {
+    width: 100%;
+    color: #ffffff;
+    margin: 0px;
+}
+div.maincontainer main div.subcontainer div p {
+    color: #ffffff;
+    font-size: 1.5em;
+    width: 50%;
+    margin: 0px;
+}
+div.maincontainer main div.subcontainer div#fifthline p, div.maincontainer main div.subcontainer div#sixthline p, div.maincontainer main div.subcontainer div#linethird p, div.maincontainer main div.subcontainer div#linefourth p {
+    width: 100%;
+}
+div.maincontainer main div.subcontainer div p button {
+    cursor: pointer;
+    height: 40px;
+    transform: translate(605px, -40px);
+    position: absolute;
+    border: none;
+    padding: 0px;
+}
+div.maincontainer main div.subcontainer div#firstline p:first-child input {
+    display: none;
+}
+div.maincontainer main div.subcontainer div#firstline p:first-child label#button {
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
+    padding: 5px 30px;
+    border-radius: 20%;
+    border: 1px solid #2c2e31;
+    background-color: #2c2e31;
+    color: #ffffff;
+    font-size: 1em;
+}
+div.maincontainer main div.subcontainer div#firstline p:first-child label:nth-child(2) {
+    opacity: 0.3;
+    margin-left: 3%;
+}
+div.maincontainer main div.subcontainer div#firstline p:first-child label#button:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #2c2e31;
+}
+div.maincontainer main div.subcontainer div.minicontainer p:nth-child(2), div.maincontainer main div.subcontainer div.conttext p:nth-child(3) {
+    margin-left: 5%;
 }
 div.maincontainer main div.subcontainer input.button {
-    margin-top: 120px;
-    width: 10%;
-    float: left;
+    margin-top: 3%;
+    margin-right: 3%;
+    width: 15%;
     padding: 5px;
     border-radius: 20%;
-    border: 1px solid black;
-    background-color: black;
-    color: cornflowerblue;
-    margin-left: 10px;
+    border: 1px solid #2c2e31;
+    background-color: #2c2e31;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-transform: uppercase;
 }
 div.maincontainer main div.subcontainer input.button:hover {
-    border: 1px solid cornflowerblue;
-    background-color: cornflowerblue;
-    color: black;
-}
-div.maincontainer main div.subcontainer input.button:last-child {
-    margin-top: 18px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #2c2e31;
 }
 div.maincontainer main div.subcontainer textarea {
     resize: none;
